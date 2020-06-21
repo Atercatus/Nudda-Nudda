@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <mete name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nudda Nudda</title>
     <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
   </head>
   <body>
-    <div class="map-container" id="map"></div>
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1b34a82c6a6e6b8036bde40297e02d08"></script>
+    <div class="container">
+      <div class="pharmacy-history-container"></div>
+      <div class="map-container" id="map"></div>
+    </div>
+
+    <div class="pharmacy-info-modal">
+      <div class="pharmacy-info-modal__overlay"></div>
+      <div class="pharmacy-info-modal__content"></div>
+    </div>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1b34a82c6a6e6b8036bde40297e02d08&libraries=services,clusterer,drawing"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>

@@ -1,13 +1,17 @@
-import { $ } from "./vendor/dom-api.js";
+import NuddaMap from "./map.js";
 
 export default class App {
   constructor() {
-    const container = $("#map");
-    const options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-      level: 3,
-    };
+    const initPos = { lat: 35.810748, lng: 128.545309 };
+    this.map = new NuddaMap(initPos, []);
 
-    const map = new kakao.maps.Map(container, options);
+    this.init();
+  }
+
+  init() {
+    // 마커 그리기
+    this.map.drawPharmaciesMarkers();
+
+    // 히스토리 초기화
   }
 }

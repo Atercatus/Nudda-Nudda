@@ -2,7 +2,99 @@
   font-size: 10px;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .map-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.pharmacy-info-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+
+.pharmacy-info-modal__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.9);
+}
+
+.pharmacy-info-modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 50rem;
-  height: 40rem;
+  height: 30rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  color: #080b40;
+  font-family: "NanumSquare", sans-serif !important;
+  z-index: 2;
+  padding: 3rem;
+}
+
+.content__pharmacy-name {
+  font-size: 3.5rem;
+  margin: 0 0 2rem 0;
+}
+
+.content__pharmacy-address,
+.content__pharmacy-remain-stat,
+.content__pharmacy-stock-at {
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+}
+
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pharmacy-history-container {
+  width: 30rem;
+  height: 100%;
+  overflow: scroll;
+}
+
+.history {
+  font-family: "NanumSquare", sans-serif !important;
+  padding: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.history__pharmacy-name {
+  font-size: 2rem;
+}
+
+.history__pharmacy-address,
+.history__pharmacy-remain-stat,
+.history__pharmacy-stock-at {
+  font-size: 1.5rem;
 }
